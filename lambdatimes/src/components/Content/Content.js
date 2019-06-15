@@ -28,7 +28,7 @@ export default class Content extends Component {
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
     this.setState({
-      seleted: tab,
+      selected: tab,
     });  
   };
 
@@ -63,11 +63,12 @@ export default class Content extends Component {
         */}
         <Tabs
           tabs={this.state.tabs}
-          SelectedTab={this.state.selected}
+          selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected}
         />
         
-        <Cards cards={this.filterCards()} />
+        <Cards 
+        cards={this.filterCards()} />
       </div>
     );
   }
@@ -75,3 +76,4 @@ export default class Content extends Component {
 
 
 //kims
+
